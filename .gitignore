@@ -1,5 +1,1 @@
-#.myenv
-.env
-/myenv
-myenv/* 
-**myenv/
+myenv/
