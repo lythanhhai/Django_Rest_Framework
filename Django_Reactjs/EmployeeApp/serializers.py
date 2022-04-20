@@ -5,7 +5,7 @@ from EmployeeApp.models import Departments, Employee
 class SerializerDepartment(serializers.ModelSerializer):
     class Meta:
         model = Departments
-        fields = ('DepartmentId', 'Departmentname')
+        fields = ('DepartmentId', 'DepartmentName')
 
 class SerializerEmployee(serializers.ModelSerializer):
     class Meta:
