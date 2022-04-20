@@ -1,8 +1,10 @@
-from django.conf.urls import url
-from django.urls import URLPattern
+from django.urls import re_path as url
+# from django.conf.urls import url
 from EmployeeApp import views
 
-URLPattern= [
+urlpatterns= [
     url("Department/", views.departmentApi),
-    url("Department/<pk:id>/", views.departmentApi)
+    url("Department/<int:id>/", views.departmentApi),
+    url("Employee/", views.EmployeeApi),
+    url("Employee/<int:id>/", views.EmployeeApi)
 ]

@@ -22,8 +22,11 @@ from EmployeeApp import views
 # from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("Department/", views.departmentApi),
-    path("Department/<int:id>/", views.departmentApi)
+    # path("Department/", views.departmentApi),
+    # path("Department/<int:id>/", views.departmentApi),
+    # path("Employee/", views.EmployeeApi),
+    # path("Employee/<int:id>/", views.EmployeeApi),
+    path("Employee/", include('EmployeeApp.urls')),
 ]
 
 # import 1 url app
