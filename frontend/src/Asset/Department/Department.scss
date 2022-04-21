@@ -1,0 +1,47 @@
+html
+{
+    font-size: 62.5%;
+}
+
+body 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Department
+{
+    margin: 0 auto;
+    //background-color: antiquewhite;
+    width: 90%;
+    height: 20rem;
+    margin-top: 2rem;
+    position: relative;
+    .table
+    {
+        border-collapse: collapse;
+        width: 100%;
+
+        th, td
+        {
+            padding: 15px;
+            border: 1px solid rgb(175, 172, 172);
+            text-align: left;
+            font-size: 1.6rem;
+        }
+    }
+    .Button
+    {
+        background-color: rgb(30, 30, 233);
+        padding: 1.5rem 3rem;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 3rem;
+        cursor: pointer;
+    }
+}
