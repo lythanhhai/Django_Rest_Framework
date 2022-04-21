@@ -1,0 +1,55 @@
+:root
+{
+
+}
+
+html 
+{
+    font-size: 62.5%;
+}
+
+body 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Title 
+{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.Navbar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 5rem;
+    background-color: rgb(95, 95, 95);
+    margin: 0 auto;
+    @mixin textNavbar() {
+        color: white;
+        text-decoration: none;
+        font-size: 1.8rem;
+        padding: 3rem;
+        border-right: 0.1px solid white;
+    }
+    &__Home 
+    {
+        @include textNavbar();
+    }
+    &__Department
+    {
+        @include textNavbar();
+    }
+    &__Employee 
+    {
+        @include textNavbar();
+    }
+}
