@@ -30,6 +30,18 @@ body
             border: 1px solid rgb(175, 172, 172);
             text-align: left;
             font-size: 1.6rem;
+            .edit, .delete
+            {
+                margin: 0 1rem 0 1rem;
+                padding: 1rem;
+                font-weight: 300;
+                outline: none;
+                border: none;
+                background-color: rgb(1,113,229);
+                color: white;
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
         }
     }
     .Button

@@ -8,7 +8,7 @@ const Navbar = () => {
             <p className='Title'>Django React App</p>
             <section className='Navbar'>
                 <Link className='Navbar__Home' to="">Home</Link>
-                <Link className='Navbar__Department' to="">Department</Link>
+                <Link className='Navbar__Department' to="Department/">Department</Link>
                 <Link className='Navbar__Employee' to="">Employee</Link>
             </section>
         </>

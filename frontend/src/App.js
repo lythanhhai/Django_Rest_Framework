@@ -7,7 +7,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Department" element={
+      <Route path="" element={
+            <>
+              <Navbar />
+            </>
+        }></Route>
+        <Route path="/Department/" element={
             <>
               <Navbar />
               <Department />
