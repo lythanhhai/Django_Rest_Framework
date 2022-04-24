@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
@@ -13,6 +13,7 @@ from django.core.files.storage import default_storage
 def departmentApi(request, id = 0):
     if request.method == "GET":
         departments = Departments.objects.all()
+        # departments = Departments.objects.get(DepartmentId= id)
         departments_serializer = SerializerDepartment(departments, many= True)
         return JsonResponse(departments_serializer.data, safe=False)
     elif request.method == "POST":
@@ -36,8 +37,10 @@ def departmentApi(request, id = 0):
         # xoa instance
         # department = Departments.objects.get(DepartmentId= id)
         # department.delete()
+        department = get_object_or_404(Departments, DepartmentId= id)
+        # department.delete()
         # or xoa truc tiep tu model
-        remove = Departments.objects.filter(DepartmentId= id).delete()
+        # Departments.objects.filter(DepartmentId= id).delete()
         return JsonResponse("Delete successful", safe= False)
     else:
         return JsonResponse("Nothing", safe= False)
@@ -67,7 +70,7 @@ def EmployeeApi(request, id= 0):
         else:
             return JsonResponse("Update unsuccessful", safe= True)
     elif request.method == "DELETE":
-        Employee.objects.filter(Employeeid= id).delete()
+        Employee.objects.filter(EmployeeId= id).delete()
         return JsonResponse("Delete successful", safe= True)
 
 @csrf_exempt
